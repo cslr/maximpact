@@ -1,0 +1,94 @@
+<html>
+  <head>
+    <title>MAXIMPACT HELP</title>
+  </head>
+  <body>
+    <h1>A BRIEF DOCUMENTATION OF MAXIMPACT</h1>
+
+    <p>
+      MaxImpact is a simple command-line tool for Interaxon Muse and
+      is developed to work together with muse-io.exe that is
+      distributed in Muse Researcher SDK.
+      The tool shows pictures (jpg and png files) from an user
+      given directory and measures changes caused by the pictures
+      to the watcher who is wearing Interaction Muse.
+    </p>
+
+    <p>
+      The maximpact.exe listens UDP packets sent to localhost 4545 port
+      meaning that muse-io.exe should be run with a command like:
+    </p>
+
+    <p>
+      <code>
+	muse-io.exe -o osc.udp://localhost:4545
+      </code>
+    </p>
+
+    <p>
+      After which maximpact command should be
+    </p>
+    
+    <p>
+      <code>
+	maximpact.exe muse c:\path\to\pictures
+      </code>
+    </p>
+
+    <p>
+      but it is also possible to test showing of the pictures using a command
+    </p>
+
+    <p>
+      <code>
+	maximpact.exe random c:\path\to\pictures
+      </code>
+    </p>
+
+    <p>
+      which generates random measurements and shows them as the results.
+    </p>
+
+    <p>
+      After watching the pictures for enough time
+      (each picture is shown 200ms per view and the number of views should be
+      at least ~30 per picture meaning that for each picture total viewing time
+      should increase 6 seconds and to compare/measure 10 pictures total
+      viewing time should be about 1 minute).
+    </p>
+
+    <h1>USES</h1>
+
+    <p>
+      The primary use of this tool is for advertisement
+      (a primitive form of <i>neuromarketing</i>). Advertiser can create
+      different versions of its banner or ad picture and
+      then measure by wearing Interaxon Muse device which pictures cause
+      largest change to the users brainwaves, or is the most difficult to
+      ignore.
+    </p>
+
+    <p>
+      The viewing time is kept at very low meaning that only primitive
+      form of visual system responses work but it is possible to
+      change the viewing time with a extra switch by executing command
+    </p>
+
+    <p>
+      <code>
+	maximpact.exe muse c:\path\to\files\ MSECS
+      </code>
+    </p>
+
+    <p>
+      where MSECS (4th argument) is a time in milliseconds defining how
+      long each picture is shown (the default is 200ms).
+    </p>
+
+    <p>
+      <i>-- Tomas Ukkonen tomas.ukkonen@iki.fi </i>
+    </p>
+
+  </body>
+</html>
+
